@@ -101,7 +101,8 @@ can be downloaded by the build pack (see the URIs in `compile`).
     --with-mysql --with-pdo-mysql --with-pgsql --with-pdo-pgsql         \
     --with-iconv --with-gd --with-curl=/usr/lib                         \
     --with-config-file-path=/app/php --enable-soap=shared               \
-    --with-openssl --with-mcrypt=/app/vendor/mcrypt --enable-sockets
+    --with-openssl --with-mcrypt=/app/vendor/mcrypt --enable-sockets    \
+    --with-gettext=/app/gettext
     make -s
     make install -s
     popd
@@ -138,11 +139,14 @@ can be downloaded by the build pack (see the URIs in `compile`).
 Hacking
 -------
 
-To change this buildpack, fork it on Github. Push up changes to your fork, then create a test app with --buildpack <your-github-url> and push to it.
+The binary are generated on Heroku. GNU gettext needs to be installed on the
+machine, remember to add the following buildpack before the pre-compile process:
+
+    https://github.com/piotras/heroku-buildpack-gettext
 
 
 Meta
 ----
 
-Created by Pedro Belo.
+Created by Pedro Belo, hacked by Daniele Polencic.
 Many thanks to Keith Rarick for the help with assorted Unix topics :)
