@@ -13,7 +13,7 @@ heroku_rev='-2'
 
 # config
 MCRYPT_VERSION="2.5.8"
-APACHE_VERSION="2.2.25"
+APACHE_VERSION="2.2.26"
 APACHE_PATH="apache"
 PHP_VERSION="5.3.27"
 PHP_PATH="php"
@@ -38,15 +38,15 @@ if [ -f www/Procfile ]; then
   mv www/Procfile .
 fi
 
-MCRYPT_URL="http://pole.uasabi.com/mcrypt-2.5.8-2.tar.gz"
+MCRYPT_URL="https://s3-eu-west-1.amazonaws.com/thruflo-random-stuff/mcrypt-2.5.8-2.tar.gz"
 echo "-----> Bundling mcrypt version 2.5.8-2"
 curl --silent --max-time 60 --location "$MCRYPT_URL" | tar xz
 
-APACHE_URL="http://pole.uasabi.com/apache-2.2.25-2.tar.gz"
-echo "-----> Bundling Apache version 2.2.25-2"
+APACHE_URL="https://s3-eu-west-1.amazonaws.com/thruflo-random-stuff/apache-2.2.26-2.tar.gz"
+echo "-----> Bundling Apache version 2.2.26-2"
 curl --silent --max-time 60 --location "$APACHE_URL" | tar xz
 
-PHP_URL="http://pole.uasabi.com/php-5.3.27-2.tar.gz"
+PHP_URL="https://s3-eu-west-1.amazonaws.com/thruflo-random-stuff/php-5.3.27-2.tar.gz"
 echo "-----> Bundling PHP version 5.3.27-2"
 curl --silent --max-time 60 --location "$PHP_URL" | tar xz
 

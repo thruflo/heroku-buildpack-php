@@ -59,7 +59,7 @@ can be downloaded by the build pack (see the URIs in `compile`).
     popd
 
     # Take care of vendoring Apache.
-    httpd_version=2.2.25
+    httpd_version=2.2.26
     httpd_dirname=httpd-$httpd_version
     httpd_archive_name=$httpd_dirname.tar.bz2
 
@@ -102,7 +102,7 @@ can be downloaded by the build pack (see the URIs in `compile`).
     --with-iconv --with-gd --with-curl=/usr/lib                         \
     --with-config-file-path=/app/php --enable-soap=shared               \
     --with-openssl --with-mcrypt=/app/vendor/mcrypt --enable-sockets    \
-    --with-gettext=/app/gettext
+    --with-gettext=/app/gettext --with-mysqli
     make -s
     make install -s
     popd
